@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://root:root@localhost:3306/mydb"
+  url      = "mysql://root:Fisika16*@localhost:3306/ticketing_api"
 }
 
 model Sample {
@@ -45,4 +45,21 @@ enum EventType {
 enum EventStatus {
   AVAILABE
   UNAVAILABLE
+}
+
+model User {
+  id        Int @id   @default(autoincrement())
+  username  String
+  firstName String
+  lastName  String
+  password  String
+  email     String    @unique
+  role      Role      @default(USER)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+enum Role {
+  USER
+  ORGANIZER
 }
