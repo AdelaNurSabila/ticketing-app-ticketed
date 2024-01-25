@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Checkout = () => {
   return (
@@ -11,7 +12,7 @@ const Checkout = () => {
                 <div class="w-full flex items-center">
                   <div class="overflow-hidden rounded-lg w-16 h-16 bg-gray-50 border border-gray-200">
                     <Image
-                      src="/logo.png"
+                      src="/taylor.jpeg"
                       alt="Logo"
                       width={200}
                       height={100}
@@ -20,18 +21,45 @@ const Checkout = () => {
                   </div>
                   <div class="flex-grow pl-3">
                     <h6 class="font-semibold uppercase text-gray-600">
-                      Ray Ban Sunglasses.
+                      Taylor Swift Eras Tour
                     </h6>
-                    <p class="text-gray-400">x 1</p>
+                    <p> Platinum A</p>
+                    <p class="text-gray-400">x 2</p>
                   </div>
                   <div>
                     <span class="font-semibold text-gray-600 text-xl">
-                      $210
+                      Rp.4.500.000
                     </span>
-                    <span class="font-semibold text-gray-600 text-sm">.00</span>
                   </div>
                 </div>
               </div>
+
+              <div class="w-full mx-auto text-gray-800 font-light mb-6 border-b border-gray-200 pb-6">
+                <div class="w-full flex items-center">
+                  <div class="overflow-hidden rounded-lg w-16 h-16 bg-gray-50 border border-gray-200">
+                    <Image
+                      src="/taylor.jpeg"
+                      alt="Logo"
+                      width={200}
+                      height={100}
+                      className="w-200 h-100"
+                    />
+                  </div>
+                  <div class="flex-grow pl-3">
+                    <h6 class="font-semibold uppercase text-gray-600">
+                      Taylor Swift Eras Tour
+                    </h6>
+                    <p> Platinum B</p>
+                    <p class="text-gray-400">x 2</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-gray-600 text-xl">
+                      Rp.4.500.000
+                    </span>
+                  </div>
+                </div>
+              </div>
+
               <div class="mb-6 pb-6 border-b border-gray-200">
                 <div class="-mx-2 flex items-end justify-end">
                   <div class="flex-grow px-2 lg:max-w-xs">
@@ -59,15 +87,15 @@ const Checkout = () => {
                     <span class="text-gray-600">Subtotal</span>
                   </div>
                   <div class="pl-3">
-                    <span class="font-semibold">$190.91</span>
+                    <span class="font-semibold">Rp 9.000.000,</span>
                   </div>
                 </div>
                 <div class="w-full flex items-center">
                   <div class="flex-grow">
-                    <span class="text-gray-600">Taxes (GST)</span>
+                    <span class="text-gray-600">Pajak(11%)</span>
                   </div>
                   <div class="pl-3">
-                    <span class="font-semibold">$19.09</span>
+                    <span class="font-semibold">Rp.990.000</span>
                   </div>
                 </div>
               </div>
@@ -77,8 +105,8 @@ const Checkout = () => {
                     <span class="text-gray-600">Total</span>
                   </div>
                   <div class="pl-3">
-                    <span class="font-semibold text-gray-400 text-sm">AUD</span>{' '}
-                    <span class="font-semibold">$210.00</span>
+                    <span class="font-semibold text-gray-400 text-sm">Rp.</span>{' '}
+                    <span class="font-semibold">9.990.000</span>
                   </div>
                 </div>
               </div>
@@ -90,7 +118,7 @@ const Checkout = () => {
                     <span class="text-gray-600 font-semibold">Contact</span>
                   </div>
                   <div class="flex-grow pl-3">
-                    <span>Scott Windon</span>
+                    <span>Sanishara</span>
                   </div>
                 </div>
                 <div class="w-full flex items-center">
@@ -100,7 +128,7 @@ const Checkout = () => {
                     </span>
                   </div>
                   <div class="flex-grow pl-3">
-                    <span>123 George Street, Sydney, NSW 2000 Australia</span>
+                    <span>Klaten, Jawa Tengah </span>
                   </div>
                 </div>
               </div>
@@ -115,13 +143,7 @@ const Checkout = () => {
                         id="type1"
                         checked
                       />
-                      <Image
-                        src="/logo.png"
-                        alt="Logo"
-                        width={200}
-                        height={100}
-                        className="w-200 h-100"
-                      />
+                     <Image src="/mastercard.png" alt="Logo" width={80} height={21} />
                     </label>
                   </div>
                   <div>
@@ -208,7 +230,8 @@ const Checkout = () => {
                       name="type"
                       id="type2"
                     />
-                    <Image src="/pay.jpg" alt="Logo" width={80} height={21} />
+                    <Image src="/bca.png" alt="Logo" width={80} height={21} />
+                    <p className='pl-2'> Virtual Account</p>
                   </label>
                 </div>
               </div>
@@ -221,7 +244,7 @@ const Checkout = () => {
           </div>
         </div>
       </div>
-     </div>
+    </div>
   );
 };
 

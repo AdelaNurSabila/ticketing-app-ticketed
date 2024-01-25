@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Ticket() {
   return (
     <>
-      <div class="h-screen bg-gray-100 pt-20 ">
+      <div class=" bg-gray-100 pt-20 ">
         <h1 class="mb-10 text-center text-2xl font-bold">Ticket Options</h1>
         <div className=" pl-[100px] pb-8 flex gap-10 justify-center ">
           <Image
@@ -54,7 +54,7 @@ export default function Ticket() {
               <p>5 Feburary 2024</p>
             </div>
 
-            <div className="flex gap-2 pb-[16px]">
+            <div className="flex gap-2 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -73,116 +73,123 @@ export default function Ticket() {
             </div>
           </div>
         </div>
+      </div>
 
+      <div>
         <div className=" pb-10">
           <hr className=" pr-[16px] border-solid border-[#555486] pb-4 " />
           <p className="pb-4 text-center">Choose Your Tickets and Quantity</p>
           <hr className=" pr-[16px] border-solid border-[#555486]" />
         </div>
-<div className='flex gap-[50px] items-center justify-center '>
-        <div className='pb-10'>
-          <div className="bg-white w-[600px] h-[8rem] rounded-lg shadow-md  ml-4 ">
-            <div className="flex gap-[16rem] pt-5 ml-4">
-              <p>Platinum A</p>
-              <div className=" flex gap-6 pt-2">
-                <p>Rp.2,800.000</p>
+      </div>
 
-                <div class="flex items-center border-gray-100">
-                  <span class="cursor-pointer rounded-l bg-gray-400 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
-                    {' '}
-                    -{' '}
-                  </span>
-                  <input
-                    class="h-8 w-8 border bg-white text-center text-xs outline-none"
-                    type="number"
-                    value="2"
-                    min="1"
-                  />
-                  <span class="cursor-pointer rounded-r bg-gray-400 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
-                    {' '}
-                    +{' '}
-                  </span>
+      <div className="flex gap-[50px] justify-center ">
+        <div className=" items-center  ">
+          <div className="pb-10">
+            <div className="bg-white w-[600px] h-[8rem] rounded-lg shadow-md  ml-4 pb-[100px] ">
+              <div className="flex gap-[16rem] pt-5 ml-4">
+                <p>Platinum A</p>
+                <div className=" flex gap-6 pt-2">
+                  <p>Rp.2,800.000</p>
+
+                  <div class="flex items-center border-gray-100">
+                    <span class="cursor-pointer rounded-l bg-gray-400 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                      {' '}
+                      -{' '}
+                    </span>
+                    <input
+                      class="h-8 w-8 border bg-white text-center text-xs outline-none"
+                      type="number"
+                      value="2"
+                      min="1"
+                    />
+                    <span class="cursor-pointer rounded-r bg-gray-400 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                      {' '}
+                      +{' '}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <hr className=" pr-[16px] border-solid border-[#555486] mt-2 mb-2 " />
+              <hr className=" pr-[16px] border-solid border-[#555486] mt-2 mb-2 " />
 
-            <div className="flex ml-4">
-              <p>View Details</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <g fill="none" fill-rule="evenodd">
-                  <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                  <path
-                    fill="currentColor"
-                    d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"
-                  />
-                </g>
-              </svg>
-            </div>
-          </div>
-          <div className="bg-white w-[600px] h-[8rem] rounded-lg shadow-md  ml-4 ">
-            <div className="flex gap-[16rem] pt-5 ml-4">
-              <p>Platinum A</p>
-              <div className=" flex gap-6 pt-2">
-                <p>Rp.2,800.000</p>
-
-                <div class="flex items-center border-gray-100">
-                  <span class="cursor-pointer rounded-l bg-gray-400 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
-                    {' '}
-                    -{' '}
-                  </span>
-                  <input
-                    class="h-8 w-8 border bg-white text-center text-xs outline-none"
-                    type="number"
-                    value="2"
-                    min="1"
-                  />
-                  <span class="cursor-pointer rounded-r bg-gray-400 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
-                    {' '}
-                    +{' '}
-                  </span>
-                </div>
+              <div className="flex ml-4">
+                <p>View Details</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                    <path
+                      fill="currentColor"
+                      d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"
+                    />
+                  </g>
+                </svg>
               </div>
             </div>
+          </div>
+          <div className=" pt-7">
+            <div className=" bg-white w-[600px] h-[8rem] rounded-lg shadow-md  ml-4 ">
+              <div className="flex gap-[16rem] pt-5 ml-4">
+                <p>Platinum A</p>
+                <div className=" flex gap-6 pt-2">
+                  <p>Rp.2,800.000</p>
 
-            <hr className=" pr-[16px] border-solid border-[#555486] mt-2 mb-2 " />
+                  <div class="flex items-center border-gray-100">
+                    <span class="cursor-pointer rounded-l bg-gray-400 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                      {' '}
+                      -{' '}
+                    </span>
+                    <input
+                      class="h-8 w-8 border bg-white text-center text-xs outline-none"
+                      type="number"
+                      value="2"
+                      min="1"
+                    />
+                    <span class="cursor-pointer rounded-r bg-gray-400 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                      {' '}
+                      +{' '}
+                    </span>
+                  </div>
+                </div>
+              </div>
 
-            <div className="flex ml-4">
-              <p>View Details</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <g fill="none" fill-rule="evenodd">
-                  <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                  <path
-                    fill="currentColor"
-                    d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"
-                  />
-                </g>
-              </svg>
+              <hr className=" pr-[16px] border-solid border-[#555486] mt-2 mb-2 " />
+
+              <div className="flex ml-4">
+                <p>View Details</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                    <path
+                      fill="currentColor"
+                      d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
-          </div>
-          <div>
-            <div className="mx-auto sticky top-[8rem]  border-solid border-[2px] border-[#555486] w-[300px] h-[160px] rounded-lg bg-white shadow-[#555486] shadow-xl dark:bg-neutral-700">
-              <p className="text-center py-3 ">Total</p>
-              <p className="text-center pb-3 font-bold">Rp. 1.400.000</p>
-              <Link href="/ticket">
-                {' '}
-                <button className=" bg-[#555486]  rounded-sm text-white w-[200px] h-[30px] mx-[50px] ">
-                  Select Tickets
-                </button>
-              </Link>
-            </div>
+        </div>
+        <div>
+          <div className="mx-auto sticky top-[8rem] border-solid border-[2px] border-[#555486] w-[300px] h-[160px] rounded-lg bg-white shadow-[#555486] shadow-xl dark:bg-neutral-700">
+            <p className="text-center py-3 ">Total</p>
+            <p className="text-center pb-3 font-bold">Rp.9.000.000</p>
+            <Link href="/checkout">
+              {' '}
+              <button className=" bg-[#555486]  rounded-sm text-white w-[200px] h-[30px] mx-[50px] ">
+                Select Tickets
+              </button>
+            </Link>
           </div>
         </div>
       </div>

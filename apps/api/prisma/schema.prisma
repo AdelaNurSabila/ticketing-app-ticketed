@@ -10,12 +10,21 @@ datasource db {
   url      = "mysql://root:root@localhost:3306/mydb"
 }
 
-model Sample {
+model User {
   id        Int      @id @default(autoincrement())
   name      String
   code      String   @unique
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime? @updatedAt
+}
+
+  model Sample {
+  id        Int      @id @default(autoincrement())
+  name      String
+  code      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime? @updatedAt
+  
 
   @@map("samples") // if you want to use snake_case format
 }
@@ -24,15 +33,19 @@ model Sample {
 
 model Event {
   id          Int @id @default(autoincrement())
-  name        String
-  slug        String @unique
-  price       Int
-  time        String
+  tittle      String
+  created_by  Int
   description String @db.Text
-  location    String
-  rating      Float
-  type        EventType
-  available   EventStatus
+  img String
+  date_event String
+  price_type EventType
+  price       Int
+  place String
+  seats Int
+  terms String
+  time        String
+  rating      Float?
+  available   Boolean @default(true)
 
   createAt    DateTime @default(now())
   updatedAt   DateTime? @updatedAt 
@@ -42,7 +55,3 @@ enum EventType {
   PAID
 }
 
-enum EventStatus {
-  AVAILABE
-  UNAVAILABLE
-}
