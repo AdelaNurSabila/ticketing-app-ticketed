@@ -5,11 +5,11 @@ const Footer = () => {
   return (
   <>
    
-<footer class="bg-[#555486] mt-10 top-[20rem] z-50">
+<footer class="bg-[#555486]  top-[20rem] z-50">
   <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-      <img src="#" class="mr-5 h-6 sm:h-9" alt="logo" />
+      <p className="text-white text-[20px] pr-[50px]">TICKETED</p>
         <p class="max-w-xs mt-4 text-sm text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
         </p>
@@ -63,7 +63,6 @@ const Footer = () => {
             Services
           </p>
           <nav class="flex flex-col mt-4 space-y-2 text-sm text-white">
-            <a class="hover:opacity-75" href> 1on1 Coaching </a>
             <a class="hover:opacity-75" href> Company Review </a>
             <a class="hover:opacity-75" href> Accounts Review </a>
             <a class="hover:opacity-75" href> HR Consulting </a>
@@ -94,7 +93,7 @@ const Footer = () => {
       </div>
     </div>
     <p class="mt-8 text-xs text-white">
-      © 2022 Comany Name
+      © 2022 TICKETED
     </p>
   </div>
 </footer>

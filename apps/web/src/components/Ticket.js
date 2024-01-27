@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Ticket() {
   return (
     <>
-      <div class=" bg-gray-100 pt-20 ">
+      <div class=" bg-gray-100 pt-20  ">
         <h1 class="mb-10 text-center text-2xl font-bold">Ticket Options</h1>
         <div className=" pl-[100px] pb-8 flex gap-10 justify-center ">
           <Image
@@ -83,7 +83,7 @@ export default function Ticket() {
         </div>
       </div>
 
-      <div className="flex gap-[50px] justify-center ">
+      <div className="flex gap-[50px] justify-center pb-10 ">
         <div className=" items-center  ">
           <div className="pb-10">
             <div className="bg-white w-[600px] h-[8rem] rounded-lg shadow-md  ml-4 pb-[100px] ">
@@ -181,15 +181,32 @@ export default function Ticket() {
           </div>
         </div>
         <div>
-          <div className="mx-auto sticky top-[8rem] border-solid border-[2px] border-[#555486] w-[300px] h-[160px] rounded-lg bg-white shadow-[#555486] shadow-xl dark:bg-neutral-700">
+          <div className="mx-auto sticky top-[8rem] border-solid border-[2px] border-[#555486] w-[300px] h-[170px] rounded-lg bg-white shadow-[#555486] shadow-xl dark:bg-neutral-700">
             <p className="text-center py-3 ">Total</p>
             <p className="text-center pb-3 font-bold">Rp.9.000.000</p>
             <Link href="/checkout">
               {' '}
-              <button className=" bg-[#555486]  rounded-sm text-white w-[200px] h-[30px] mx-[50px] ">
-                Select Tickets
+              <button className=" bg-[#555486]  rounded-sm text-white w-[200px] h-[30px] mx-[50px]  hover:bg-blue-500  ">
+                Buy Tickets
               </button>
             </Link>
+            <div className="flex justify-center items-center pt-4 text-[#555486]  hover:text-blue-500">
+              <Link href="/mycart" className='flex gap-2'>
+                <p>Add to cart</p>
+              
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z"
+                  />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

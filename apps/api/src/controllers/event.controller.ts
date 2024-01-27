@@ -7,7 +7,6 @@ export class CreateEventsController {
       const newEvent = await prisma.event.create({
         data: {
           tittle: req.body.tittle,
-          created_by: req.body.created_by,
           description: req.body.description,
           img: req.body.img,
           date_event: req.body.date_event,
@@ -17,6 +16,7 @@ export class CreateEventsController {
           seats: req.body.seats,
           terms: req.body.terms,
           time: req.body.time,
+          category: req.body.category,
         },
       });
 

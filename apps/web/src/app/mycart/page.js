@@ -1,22 +1,23 @@
+import Cart from "@/components/Cart";
 import Details from "@/components/Details";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Ticket from "@/components/Ticket";
-import Checkout from "@/components/checkout";
-import Free from "@/components/free";
+import Nocart from "@/components/nocart";
 import Image from "next/image";
 import Link from "next/link";
 
-const Home = () => {
+const Mycart = () => {
   return (
     <>
       <div>
         <Navbar />
-        <Free />
-        <Footer />
+        <Nocart />
+        <Cart/>
       </div>
+      <Footer />
     </>
   );
 };
 
-export default Home;
+export default Mycart;

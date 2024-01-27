@@ -49,7 +49,7 @@ const Search = () => {
             {/* time */}
 
             <div>
-              <div className=" px-4">Time</div>
+              <div className=" px-4">Date</div>
               <div>
                 <input
                   id="name"
