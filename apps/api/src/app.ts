@@ -10,7 +10,9 @@ import express, {
 import cors from 'cors';
 import { PORT } from './config';
 import { SampleRouter } from './routers/sample.router';
+
 import { CreateEventsRouter } from './routers/event.router';
+
 import { AuthRouter } from './routers/auth.router';
 
 export default class App {
@@ -54,6 +56,7 @@ export default class App {
 
   private routes(): void {
     const sampleRouter = new SampleRouter();
+    const authRouter = new AuthRouter();
 
     const createEventsRouter = new CreateEventsRouter();
 
@@ -69,6 +72,7 @@ export default class App {
     });
 
     this.app.use('/samples', sampleRouter.getRouter());
+    this.app.use('/auth', authRouter.getRouter());
   }
 
   public start(): void {

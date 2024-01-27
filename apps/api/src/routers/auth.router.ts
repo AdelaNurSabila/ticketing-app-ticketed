@@ -1,19 +1,26 @@
 
-import { AuthController } from '@/controllers/auth.controller';
-import { Router } from 'express';
+import { NextFunction, Request, Response, Router } from 'express';
+import { AuthController } from '../controllers/auth.controller';
+import { body, validationResult } from 'express-validator';
+import { regisValidation } from '../middleware/validator';
 
 export class AuthRouter {
   private router: Router;
-  private authcontroller:AuthController ;
+  private authController: AuthController;
 
   constructor() {
-    this.authcontroller = new AuthController();
+    this.authController = new AuthController();
     this.router = Router();
-    this.initializeRouter();
+    this.initializeRoutes();
   }
 
-  private initializeRouter(): void {
-    this.router.post('/register', this.authcontroller.register);
+  private initializeRoutes(): void {
+    this.router.post(
+      '/regis',
+      regisValidation,
+      this.authController.registerUser,
+    );
+
   }
 
   getRouter(): Router {

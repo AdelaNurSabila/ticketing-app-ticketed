@@ -32,7 +32,10 @@
     }
   },
   "dependencies": {
+
     "prisma": "^5.8.1",
-    "react-datepicker": "^5.0.0"
+    "react-datepicker": "^5.0.0
+    "react-icons": "^5.0.1"
+
   }
 }

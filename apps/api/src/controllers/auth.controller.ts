@@ -1,23 +1,26 @@
-import { Request, Response } from 'express';
-import prisma from '@/prisma';
+
+import { Request, Response, NextFunction } from 'express';
+import prisma from '../prisma';
 
 export class AuthController {
-  async getSampleData(req: Request, res: Response) {
-    const sampleData = await prisma.sample.findMany();
-
-    return res.status(200).send(sampleData);
-  }
-
-  async register(req: Request, res: Response) {
+  async registerUser(req: Request, res: Response, next: NextFunction) {
     try {
-      const newUsers = await prisma.user.create({
+      const { username, firstName, lastName, password, email } = req.body;
+
+      const newUser = await prisma.user.create({
         data: {
-          name: req.body.name,
-          code: req.body.code,
+          username,
+          firstName,
+          lastName,
+          password,
+          email,
         },
       });
+      res.status(201).send(newUser);
+    } catch (error: any) {
+      console.log(error);
+      return res.status(500).send(error);
+    }
 
-      return res.status(201).send({ success: true, data: newUsers });
-    } catch (error) {}
   }
 }
