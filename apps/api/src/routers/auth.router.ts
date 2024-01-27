@@ -1,3 +1,4 @@
+
 import { NextFunction, Request, Response, Router } from 'express';
 import { AuthController } from '../controllers/auth.controller';
 import { body, validationResult } from 'express-validator';
@@ -19,6 +20,7 @@ export class AuthRouter {
       regisValidation,
       this.authController.registerUser,
     );
+
   }
 
   getRouter(): Router {

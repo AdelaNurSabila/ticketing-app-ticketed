@@ -1,3 +1,4 @@
+
 import { Request, Response, NextFunction } from 'express';
 import prisma from '../prisma';
 
@@ -20,5 +21,6 @@ export class AuthController {
       console.log(error);
       return res.status(500).send(error);
     }
+
   }
 }
