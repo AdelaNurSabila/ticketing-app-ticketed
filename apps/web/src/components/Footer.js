@@ -9,7 +9,7 @@ const Footer = () => {
   <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-      <p className="text-white text-[20px] pr-[50px]">TICKETED</p>
+      <p className="text-white font-bold text-[20px] pr-[50px]">TICKETED</p>
         <p class="max-w-xs mt-4 text-sm text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
         </p>

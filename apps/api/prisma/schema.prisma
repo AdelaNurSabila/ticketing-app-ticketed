@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://root:Fisika16*@localhost:3306/ticketing_api"
+  url      = "mysql://root:root@localhost:3306/mydb"
 }
 
   model Sample {
@@ -53,7 +53,7 @@ enum CategoryType {
   
 }
 
-=======
+
 enum EventStatus {
   AVAILABE
   UNAVAILABLE

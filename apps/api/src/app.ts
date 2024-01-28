@@ -60,7 +60,7 @@ export default class App {
 
     const createEventsRouter = new CreateEventsRouter();
 
-    const authRouter = new AuthRouter();
+  
 
     this.app.use('/auth', authRouter.getRouter ());
 
