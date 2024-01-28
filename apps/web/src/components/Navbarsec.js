@@ -1,38 +1,40 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Navbar = () => {
+const Navbarsec = () => {
   return (
     <>
       <div className=" bg-white sticky top-0 left-0 z-50 shadow-md ">
-        <div className=" m-auto max-w-[1260px] h-[100px]  flex items-center justify-center gap-[130px]">
+        <div className=" m-auto max-w-[1260px] h-[100px]  flex items-center justify-center gap-[120px]">
           <div className=" font-bold">
             <Link href="/">
               <p className="text-[#555486] text-[20px] pr-[50px]">TICKETED</p>
             </Link>
           </div>
-          <div className="">
-            <ul className="flex gap-10  md:text-[20px] sm:text-[15px] text-[12px] me-1 text-[#555486] sm:mr-1">
-              <Link href="/">
-                {' '}
-                <li className="cursor-pointer hover:text-blue-300">Concerts</li>{' '}
-              </Link>
-              <Link href="/about" className="cursor-pointer hover:text-blue-300">
-                <li>Trips</li>
-              </Link>
-              <Link href="/servis">
-                <li className="cursor-pointer hover:text-blue-300 ">Attraction</li>
-              </Link>
-              <Link href="/team">
-                {' '}
-                <li className="cursor-pointe hover:text-blue-300">Beauty</li>{' '}
-              </Link>
-              <Link href="/team">
-                {' '}
-                <li className="cursor-pointer hover:text-blue-300">Hobby</li>{' '}
-              </Link>
-            </ul>
-          </div>
+
+          <div class=" bg-white">
+            <div class="flex items-center bg-gray-100 px-4 py-2 rounded-md space-x-3 w-96">
+              <input
+                type="text"
+                placeholder="search"
+                class="bg-gray-100 outline-none w-full"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 cursor-pointer text-gray-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+            </div>
 
           <div className="flex justify-center items-center gap-2">
             <div class="flex-initial">
@@ -40,12 +42,11 @@ const Navbar = () => {
                 <div class="flex mr-4 items-center gap-2">
                   <a
                     class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full text-[#555486]"
-                    href="/create"
+                    href="#"
                   >
                     <div class="flex items-center relative cursor-pointer whitespace-nowrap">
                       Create Event
                     </div>
-                    
                   </a>
                   <a
                     class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full text-[#555486]"
@@ -68,4 +69,4 @@ const Navbar = () => {
     </>
   );
 };
-export default Navbar;
+export default Navbarsec;
