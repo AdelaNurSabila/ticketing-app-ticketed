@@ -6,8 +6,8 @@ const ListEvent = () => {
   return (
     <>
       {/* dashboard organizer */}
-      <div className="px-[150px]">
-        <div className="font-bold text-5xl mt-5">Events</div>
+      <div className="px-[150px] pt-[100px]">
+        <div className="font-bold text-5xl pt-5">Events</div>
       </div>
       <div className="px-[150px] pt-[50px]">
         <div className="grid grid-cols-10 pb-[50px]">
