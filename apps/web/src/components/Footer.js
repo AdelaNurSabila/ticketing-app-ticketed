@@ -1,8 +1,9 @@
-import Image from "next/image";
-import Link from "next/image";
+import Image from 'next/image';
+import Link from 'next/image';
 
 const Footer = () => {
   return (
+    
   <>
    
 <footer class="bg-[#555486]  top-[20rem] z-50">
@@ -98,8 +99,6 @@ const Footer = () => {
   </div>
 </footer>
     </>
-    
-    );
-  };
-  export default Footer;
-  
+  );
+};
+export default Footer;

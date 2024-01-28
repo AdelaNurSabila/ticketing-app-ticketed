@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <div>
         <NavbarOrg />
-        <HomeOrg />
+        <ListEvent />
         <Footer />
       </div>
     </>

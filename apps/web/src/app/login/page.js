@@ -6,6 +6,7 @@ import ListEvent from '@/components/ListEvent';
 import Navbar from '@/components/Navbar';
 import SignUp from '@/components/SignUp';
 import ForgotPass from '@/components/ForgotPass';
+import NavbarSide from '@/components/NavbarSide';
 
 const Home = () => {
   return (
