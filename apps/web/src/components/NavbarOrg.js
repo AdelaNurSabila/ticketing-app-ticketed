@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { BsArrowLeftShort } from 'react-icons/bs';
+import { BsArrowRightShort } from 'react-icons/bs';
 import { RiDashboardFill, Ri4KFill } from 'react-icons/ri';
 import { SiEventstore } from 'react-icons/si';
 import { FaFirstOrderAlt } from 'react-icons/fa';
@@ -56,10 +56,10 @@ const NavbarOrg = () => {
       <div className="fixed z-40 ">
         <div
           className={`bg-black h-screen p-5 pt-8 fixed ${
-            open ? 'w-48' : 'w-24'
+            open ? 'w-24' : 'w-48'
           } duration-500 relative`}
         >
-          <BsArrowLeftShort
+          <BsArrowRightShort
             className={`bg-white text-black text-3xl rounded-full absolute -right-3 top-9 border border-black cursor-pointer ${
               !open && 'rotate-180'
             }`}
@@ -68,7 +68,7 @@ const NavbarOrg = () => {
           <div className="inline-flex">
             <h1
               className={`text-white origin-left text-2xl duration-300 ${
-                !open && 'text-xs'
+                open && 'text-xs'
               }`}
             >
               Ticketed
@@ -84,7 +84,7 @@ const NavbarOrg = () => {
                 </span>
                 <span
                   className={`text-base font-medium flex-1 duration-200 my-2 ${
-                    !open && 'hidden'
+                    open && 'hidden'
                   } `}
                 >
                   Dashboard
@@ -98,7 +98,7 @@ const NavbarOrg = () => {
                 </span>
                 <span
                   className={`text-base font-medium flex-1 duration-200 my-2 ${
-                    !open && 'hidden'
+                    open && 'hidden'
                   } `}
                 >
                   Events
@@ -112,7 +112,7 @@ const NavbarOrg = () => {
                 </span>
                 <span
                   className={`text-base font-medium flex-1 duration-200 my-2 ${
-                    !open && 'hidden'
+                    open && 'hidden'
                   } `}
                 >
                   Orders
@@ -126,7 +126,7 @@ const NavbarOrg = () => {
                 </span>
                 <span
                   className={`text-base font-medium flex-1 duration-200 my-2 ${
-                    !open && 'hidden'
+                    open && 'hidden'
                   } `}
                 >
                   Marketing
@@ -140,7 +140,7 @@ const NavbarOrg = () => {
                 </span>
                 <span
                   className={`text-base font-medium flex-1 duration-200 my-2 ${
-                    !open && 'hidden'
+                    open && 'hidden'
                   } `}
                 >
                   Reporting
@@ -154,7 +154,7 @@ const NavbarOrg = () => {
                 </span>
                 <span
                   className={`text-base font-medium flex-1 duration-200 my-2 ${
-                    !open && 'hidden'
+                    open && 'hidden'
                   } `}
                 >
                   OrgSetting

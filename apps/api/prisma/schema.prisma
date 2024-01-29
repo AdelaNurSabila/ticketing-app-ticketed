@@ -62,15 +62,15 @@ enum EventStatus {
 }
 
 model User {
-  id        Int @id   @default(autoincrement())
-  username  String
-  firstName String
-  lastName  String
-  password  String
-  email     String    @unique
-  role      Role      @default(USER)
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  id          Int @id   @default(autoincrement())
+  firstName   String
+  lastName    String
+  phoneNumber String
+  email       String    @unique
+  password    String
+  role        Role      @default(USER)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 }
 
 enum Role {

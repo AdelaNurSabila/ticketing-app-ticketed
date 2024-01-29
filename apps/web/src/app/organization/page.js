@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <div>
-        <NavbarSide />
+        <NavbarOrg />
         <ListEvent />
         <Footer />
       </div>
