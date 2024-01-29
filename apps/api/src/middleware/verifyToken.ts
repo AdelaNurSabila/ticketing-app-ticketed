@@ -21,7 +21,6 @@ export const verifyToken = async (
       return res.status(400).send('Token not found');
     }
 
-    // Mengambil data token dari redis dan dicocokkan dengan token dari header
     const checkToken = await redisClient.get(`forgot:${req.body.email}`);
     console.log(token, checkToken);
 

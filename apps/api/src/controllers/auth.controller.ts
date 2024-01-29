@@ -90,7 +90,7 @@ export class AuthController {
           message: 'Check your email',
         });
       } else {
-        // 3. if not exist throw error
+  
         throw new Error('Account is not exist');
       }
     } catch (error: any) {
