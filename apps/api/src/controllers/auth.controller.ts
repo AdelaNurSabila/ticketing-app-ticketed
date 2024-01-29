@@ -1,3 +1,4 @@
+
 import { Request, Response, NextFunction } from 'express';
 import prisma from '../prisma';
 import { genSalt, hash } from 'bcrypt';
@@ -106,5 +107,6 @@ export class AuthController {
     } catch (error) {
       next(error);
     }
+
   }
 }

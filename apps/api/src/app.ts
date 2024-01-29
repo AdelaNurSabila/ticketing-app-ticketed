@@ -9,6 +9,7 @@ import express, {
 } from 'express';
 import cors from 'cors';
 import { PORT } from './config';
+import { CreateEventsRouter } from './routers/event.router';
 import { AuthRouter } from './routers/auth.router';
 import { ImageRouter } from './routers/image.router';
 import { NodemailerRouter } from './routers/nodemailer.router';
@@ -36,6 +37,7 @@ export default class App {
     const imageRouter = new ImageRouter();
     const nodemailerRouter = new NodemailerRouter();
     const postsRouter = new PostsRouter();
+    const createEventsRouter = new CreateEventsRouter();
 
     this.app.get('/', (req: Request, res: Response) => {
       res.send(`Hello, TICKETED BUDDY!`);
@@ -47,6 +49,7 @@ export default class App {
     this.app.use('/image', imageRouter.getRouter());
     this.app.use('/mail', nodemailerRouter.getRouter());
     this.app.use('/posts', postsRouter.getRouter());
+    this.app.use('/event', createEventsRouter.getRouter());
   }
 
   private handleError(): void {
@@ -58,10 +61,11 @@ export default class App {
     );
   }
 
+
   public async start(): Promise<void> {
     await redisClient.connect();
     this.app.listen(PORT, () => {
-      console.log(`  ➜  [API] Local:   http://localhost:${PORT}/`);
-    });
+        console.log(`API RUNNING : http://localhost:${PORT}/`);
+    })
   }
 }

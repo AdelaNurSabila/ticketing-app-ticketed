@@ -1,25 +1,23 @@
 import Details from '@/components/Details';
+import Discovery from '@/components/Discovery';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import Navbarsec from '@/components/Navbarsec';
+import Navbartri from '@/components/Navbartri';
 import Ticket from '@/components/Ticket';
-import Checkout from '@/components/checkout';
-import ListEvent from '@/components/ListEvent';
 import Image from 'next/image';
 import Link from 'next/link';
-import NavbarOrg from '@/components/NavbarOrg';
-import HomeOrg from '@/components/HomeOrg';
 
 const Home = () => {
   return (
     <>
       <div>
-        <NavbarOrg />
-        <ListEvent />
+        <Navbarsec />
+        <Discovery />
         <Footer />
       </div>
     </>
   );
 };
-
 
 export default Home;

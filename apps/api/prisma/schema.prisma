@@ -1,21 +1,21 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://root:Fisika16*@localhost:3306/mydb"
+
+  url      = "mysql://root:root@localhost:3306/mydb"
+
 }
 
-model Sample {
+  model Sample {
   id        Int      @id @default(autoincrement())
   name      String
   code      String   @unique
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime? @updatedAt
+  
 
   @@map("samples") // if you want to use snake_case format
 }
@@ -24,23 +24,37 @@ model Sample {
 
 model Event {
   id          Int @id @default(autoincrement())
-  name        String
-  slug        String @unique
-  price       Int
-  time        String
+  tittle      String
   description String @db.Text
-  location    String
-  rating      Float
-  type        EventType
-  available   EventStatus
+  img String
+  date_event String
+  price_type EventType
+  price       Int
+  place String
+  seats Int
+  terms String
+  time        String
+  rating      Float?
+  category   CategoryType
+  available   Boolean @default(true)
 
   createAt    DateTime @default(now())
   updatedAt   DateTime? @updatedAt 
+ 
 }
 enum EventType {
   FREE
   PAID
 }
+
+enum CategoryType {
+  Hobby
+  Concert
+  Attraction
+  Beauty
+  
+}
+
 
 enum EventStatus {
   AVAILABE

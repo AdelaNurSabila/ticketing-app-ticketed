@@ -1,37 +1,71 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Checkout = () => {
   return (
     <div class="min-w-screen min-h-screen bg-gray-50 ">
+     <Link href="/"><div className='flex px-10 py-10 gap-2'>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8l8 8l1.41-1.41L7.83 13H20z"/></svg>
+   <p> Checkout</p> 
+</div>
+</Link>
+
       <div class="w-full bg-white border-t border-b border-gray-200 px-5 py-10 text-gray-800">
         <div class="w-full">
           <div class="-mx-3 md:flex items-start">
             <div class="px-3 md:w-7/12 lg:pr-10">
               <div class="w-full mx-auto text-gray-800 font-light mb-6 border-b border-gray-200 pb-6">
                 <div class="w-full flex items-center">
-                  <div class="overflow-hidden rounded-lg w-16 h-16 bg-gray-50 border border-gray-200">
+                  <div class="overflow-hidden rounded-lg  bg-gray-50 border border-gray-200">
                     <Image
-                      src="/logo.png"
+                      src="/taylor.jpeg"
                       alt="Logo"
-                      width={200}
+                      width={100}
                       height={100}
                       className="w-200 h-100"
                     />
                   </div>
                   <div class="flex-grow pl-3">
                     <h6 class="font-semibold uppercase text-gray-600">
-                      Ray Ban Sunglasses.
+                      Taylor Swift Eras Tour
                     </h6>
-                    <p class="text-gray-400">x 1</p>
+                    <p> Platinum A</p>
+                    <p class="text-gray-400">x 2</p>
                   </div>
                   <div>
                     <span class="font-semibold text-gray-600 text-xl">
-                      $210
+                      Rp.4.500.000
                     </span>
-                    <span class="font-semibold text-gray-600 text-sm">.00</span>
                   </div>
                 </div>
               </div>
+
+              <div class=" mx-auto text-gray-800 font-light mb-6 border-b border-gray-200 pb-6">
+                <div class=" flex items-center">
+                  <div class="overflow-hidden rounded-lg  bg-gray-50 border border-gray-200">
+                    <Image
+                      src="/taylor.jpeg"
+                      alt="Logo"
+                      width={100}
+                      height={100}
+                      className=""
+                    />
+                  </div>
+                  <div class="flex-grow pl-3">
+                    <h6 class="font-semibold uppercase text-gray-600">
+                      Taylor Swift Eras Tour
+                    </h6>
+                    <p> Platinum B</p>
+                    <p class="text-gray-400">x 2</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-gray-600 text-xl">
+                      Rp.4.500.000
+                    </span>
+                  </div>
+                </div>
+              </div>
+
               <div class="mb-6 pb-6 border-b border-gray-200">
                 <div class="-mx-2 flex items-end justify-end">
                   <div class="flex-grow px-2 lg:max-w-xs">
@@ -47,7 +81,7 @@ const Checkout = () => {
                     </div>
                   </div>
                   <div class="px-2">
-                    <button class="block w-full max-w-xs mx-auto border border-transparent bg-gray-400 hover:bg-gray-500 focus:bg-gray-500 text-white rounded-md px-5 py-2 font-semibold">
+                    <button class="block w-full max-w-xs mx-auto border border-transparent  hover:bg-blue-500 bg-[#555486] focus:bg-gray-500 text-white rounded-md px-5 py-2 font-semibold">
                       APPLY
                     </button>
                   </div>
@@ -59,15 +93,15 @@ const Checkout = () => {
                     <span class="text-gray-600">Subtotal</span>
                   </div>
                   <div class="pl-3">
-                    <span class="font-semibold">$190.91</span>
+                    <span class="font-semibold">Rp 9.000.000,</span>
                   </div>
                 </div>
                 <div class="w-full flex items-center">
                   <div class="flex-grow">
-                    <span class="text-gray-600">Taxes (GST)</span>
+                    <span class="text-gray-600">Pajak(11%)</span>
                   </div>
                   <div class="pl-3">
-                    <span class="font-semibold">$19.09</span>
+                    <span class="font-semibold">Rp.990.000</span>
                   </div>
                 </div>
               </div>
@@ -77,8 +111,8 @@ const Checkout = () => {
                     <span class="text-gray-600">Total</span>
                   </div>
                   <div class="pl-3">
-                    <span class="font-semibold text-gray-400 text-sm">AUD</span>{' '}
-                    <span class="font-semibold">$210.00</span>
+                    <span class="font-semibold text-gray-400 text-sm">Rp.</span>{' '}
+                    <span class="font-semibold">9.990.000</span>
                   </div>
                 </div>
               </div>
@@ -90,7 +124,7 @@ const Checkout = () => {
                     <span class="text-gray-600 font-semibold">Contact</span>
                   </div>
                   <div class="flex-grow pl-3">
-                    <span>Scott Windon</span>
+                    <span>Sanishara</span>
                   </div>
                 </div>
                 <div class="w-full flex items-center">
@@ -100,7 +134,7 @@ const Checkout = () => {
                     </span>
                   </div>
                   <div class="flex-grow pl-3">
-                    <span>123 George Street, Sydney, NSW 2000 Australia</span>
+                    <span>Klaten, Jawa Tengah </span>
                   </div>
                 </div>
               </div>
@@ -113,14 +147,12 @@ const Checkout = () => {
                         class="form-radio h-5 w-5 text-indigo-500"
                         name="type"
                         id="type1"
-                        checked
                       />
                       <Image
-                        src="/logo.png"
+                        src="/mastercard.png"
                         alt="Logo"
-                        width={200}
-                        height={100}
-                        className="w-200 h-100"
+                        width={80}
+                        height={21}
                       />
                     </label>
                   </div>
@@ -208,12 +240,18 @@ const Checkout = () => {
                       name="type"
                       id="type2"
                     />
-                    <Image src="/pay.jpg" alt="Logo" width={80} height={21} />
+                    <Image src="/bca.png" alt="Logo" width={80} height={21} />
+                    <p className="pl-2 font-bold text-blue-800 "> Virtual Account</p>
                   </label>
+                  <div className='text-center pt-10 pb-10 font-medium text-gray-600 '>
+                    <p>Tranfer ke Virtual Account Bca</p>
+                    <p>12345000001235</p>
+                    <p className='hover:text-red-500'>Salin</p>
+                  </div>
                 </div>
               </div>
               <div>
-                <button class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-2 font-semibold">
+                <button class="block w-full max-w-xs mx-auto hover:bg-blue-500 bg-[#555486] text-white rounded-lg px-3 py-2 font-semibold">
                   PAY NOW
                 </button>
               </div>
@@ -221,7 +259,7 @@ const Checkout = () => {
           </div>
         </div>
       </div>
-     </div>
+    </div>
   );
 };
 
