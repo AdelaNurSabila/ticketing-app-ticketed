@@ -47,10 +47,9 @@ const Login = () => {
                   Remember me{' '}
                 </label>
               </div>
-              <a href="#" className="text-sm">
-                {' '}
-                Forgot your password?{' '}
-              </a>
+              <Link href="/forgotpassword">
+                <ul className="cursor-pointer">Forgot your password?</ul>
+              </Link>
             </div>
             <div className="mt-6">
               <button className="w-full inline-flex items-center justify-center px-4 py-2 bg-[#555486] border border-transparent rounded-md font-semibold capitalize text-white hover:bg-red-700 active:bg-red-700 focus:outline-none focus:border-red-700 focus:ring focus:ring-red-200 disabled:opacity-25 transition">
@@ -58,9 +57,9 @@ const Login = () => {
               </button>
             </div>
             <div className="mt-6 text-center">
-              <a href="#" className="underline">
-                Sign up for an account
-              </a>
+              <Link href="/sign-up">
+                <ul className="underline">Sign up for an account</ul>
+              </Link>
             </div>
           </form>
         </div>

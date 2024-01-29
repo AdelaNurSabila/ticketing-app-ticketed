@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response, Router } from 'express';
 import { AuthController } from '../controllers/auth.controller';
-import { body, validationResult } from 'express-validator';
 import { regisValidation } from '../middleware/validator';
+import { verifyToken } from '../middleware/verifyToken';
 
 export class AuthRouter {
   private router: Router;
@@ -19,6 +19,8 @@ export class AuthRouter {
       regisValidation,
       this.authController.registerUser,
     );
+    this.router.post('/forgotpass', this.authController.forgotPassword);
+    this.router.patch('/reset', verifyToken, this.authController.resetPassword);
   }
 
   getRouter(): Router {

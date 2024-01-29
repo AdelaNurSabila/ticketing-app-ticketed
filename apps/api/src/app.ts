@@ -9,11 +9,14 @@ import express, {
 } from 'express';
 import cors from 'cors';
 import { PORT } from './config';
-import { SampleRouter } from './routers/sample.router';
 import { AuthRouter } from './routers/auth.router';
+import { ImageRouter } from './routers/image.router';
+import { NodemailerRouter } from './routers/nodemailer.router';
+import { PostsRouter } from './routers/posts.router';
+import { redisClient } from './helpers/redis';
 
 export default class App {
-  private app: Express;
+  readonly app: Express;
 
   constructor() {
     this.app = express();
@@ -28,42 +31,35 @@ export default class App {
     this.app.use(urlencoded({ extended: true }));
   }
 
-  private handleError(): void {
-    // not found
-    this.app.use((req: Request, res: Response, next: NextFunction) => {
-      if (req.path.includes('/api/')) {
-        res.status(404).send('Not found !');
-      } else {
-        next();
-      }
-    });
+  private routes(): void {
+    const authRouter = new AuthRouter();
+    const imageRouter = new ImageRouter();
+    const nodemailerRouter = new NodemailerRouter();
+    const postsRouter = new PostsRouter();
 
-    // error
+    this.app.get('/', (req: Request, res: Response) => {
+      res.send(`Hello, TICKETED BUDDY!`);
+    });
+    this.app.get('/', (req: Request, res: Response) => {
+      return res.status(200).send('<h1>Welcome to TICKETED GROUPS</h1>');
+    });
+    this.app.use('/auth', authRouter.getRouter());
+    this.app.use('/image', imageRouter.getRouter());
+    this.app.use('/mail', nodemailerRouter.getRouter());
+    this.app.use('/posts', postsRouter.getRouter());
+  }
+
+  private handleError(): void {
     this.app.use(
       (err: Error, req: Request, res: Response, next: NextFunction) => {
-        if (req.path.includes('/api/')) {
-          console.error('Error : ', err.stack);
-          res.status(500).send('Error !');
-        } else {
-          next();
-        }
+        console.log('ERROR : ', err);
+        return res.status(500).send(err);
       },
     );
   }
 
-  private routes(): void {
-    const sampleRouter = new SampleRouter();
-    const authRouter = new AuthRouter();
-
-    this.app.get('/', (req: Request, res: Response) => {
-      res.send(`Hello, Purwadhika Student !`);
-    });
-
-    this.app.use('/samples', sampleRouter.getRouter());
-    this.app.use('/auth', authRouter.getRouter());
-  }
-
-  public start(): void {
+  public async start(): Promise<void> {
+    await redisClient.connect();
     this.app.listen(PORT, () => {
       console.log(`  ➜  [API] Local:   http://localhost:${PORT}/`);
     });

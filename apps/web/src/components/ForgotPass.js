@@ -29,9 +29,9 @@ const ForgotPass = () => {
               </button>
             </div>
             <div className="mt-6 text-center">
-              <a href="#" className="underline">
-                Back to Login
-              </a>
+              <Link href="/login">
+                <ul className="underline">Back to Login</ul>
+              </Link>
             </div>
           </form>
         </div>
